@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.log
+
+# Local authentication/configuration must never enter Git.
+.env*
+local-api-key
+local-api-key.*
+automation.json
+.workbuddy*-auth.json
+workbuddy-desktop*.info
+*.pem
+background.log*

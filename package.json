@@ -1,0 +1,16 @@
+{
+  "name": "pi-workbuddy-connect",
+  "version": "0.4.1",
+  "private": true,
+  "description": "PI-Desktop guide plugin and local WorkBuddy OpenAI-compatible bridge",
+  "license": "MIT",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "build": "node bridge/build.cjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-atomic-write": "0.2.0-rc.2",
+    "esbuild": "0.25.12"
+  }
+}

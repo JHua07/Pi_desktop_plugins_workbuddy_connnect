@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "community.workbuddy-connect",
+  "name": "WorkBuddy Connect",
+  "version": "0.4.1",
+  "description": "随 PI 加载启动本机 WorkBuddy 桥接，插件内管理配置、Key、认证及模型；保留网页后台。",
+  "main": "main.js",
+  "ui": { "panel": "bridge/dashboard/index.html", "title": "WorkBuddy Connect" },
+  "contributes": {
+    "commands": [
+      { "id": "pi-workbuddy-connect.open", "title": "WorkBuddy Connect: 接入管理", "keywords": ["workbuddy", "模型", "状态"] },
+      { "id": "pi-workbuddy-connect.browser", "title": "WorkBuddy Connect: 打开网页后台", "keywords": ["workbuddy", "网页"] }
+    ],
+    "services": [ { "id": "workbuddy-bridge", "label": "WorkBuddy 本机桥接（读取本人客户端凭据并调用上游）", "autoRestart": true } ],
+    "settings": [
+      { "key": "port", "type": "string", "title": "本机端口（修改后重新加载插件）", "default": "18765" },
+      { "key": "dataDirectory", "type": "string", "title": "专用数据目录（空值使用 ~/.pi-workbuddy-connect）", "default": "" },
+      { "key": "WORKBUDDY_AUTH_FILE", "type": "string", "title": "国内客户端凭据路径（可选）", "default": "" },
+      { "key": "WORKBUDDY_AI_AUTH_FILE", "type": "string", "title": "国际客户端凭据路径（可选）", "default": "" },
+      { "key": "WORKBUDDY_ELECTRON_BIN", "type": "string", "title": "国内 WorkBuddy 程序路径（可选）", "default": "" },
+      { "key": "WORKBUDDY_AI_ELECTRON_BIN", "type": "string", "title": "国际 WorkBuddy AI 程序路径（可选）", "default": "" }
+    ]
+  },
+  "permissions": ["ui.panel", "clipboard.write", "shell.openExternal", "background.service"],
+  "engines": { "piDesktop": ">=0.17.0" },
+  "activationEvents": ["onCommand:pi-workbuddy-connect.open", "onCommand:pi-workbuddy-connect.browser", "onStartup"]
+}
