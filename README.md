@@ -31,7 +31,7 @@
 
 当前版本：**0.4.1**。
 
-[下载 `.piplug` 安装包](https://github.com/JHua07/Pi_desktop_plugins_workbuddy_connnect/raw/refs/heads/main/dist/community.workbuddy-connect-0.4.1.piplug) · [查看安装包](dist/community.workbuddy-connect-0.4.1.piplug)
+[官方市场页面](https://plugins.aiuo.net/plugins/community.workbuddy-connect) · [下载 `.piplug`](https://plugins.aiuo.net/download/community.workbuddy-connect/0.4.1) · [GitHub 源码仓库](https://github.com/JHua07/Pi_desktop_plugins_workbuddy_connnect)
 
 1. 在 **PI → 插件** 选择从文件安装，导入 `.piplug`。
 2. 确认权限说明，批准后台服务权限并启用插件。
@@ -107,7 +107,8 @@ npm.cmd test
 
 使用 PI 官方 `PluginCheck` / `PluginPack` 校验及打包 `.piplug`，不要用压缩 ZIP 代替安装包。
 
-截至 0.4.1：**43 项自动测试通过**；PI 0.17.0 原版宿主隔离 IPC 与 Edge 验证面板授权、复制、暂停/恢复、卸载释放端口及状态同步。真实国内账号读取和模型目录获取成功，验证时为 19 个模型。
+截至 0.4.1，**43 项自动测试通过**；PI 0.17.0 原版宿主隔离 IPC 与 Edge 验证面板授权、复制、暂停/恢复、卸载释放端口及状态同步。真实国内账号读取和模型目录获取成功，验证时为 19 个模型。
+0.4.1 已在官方市场显示“已发布”，自动审计通过且仓库归属已验证；详情仍显示源码审查未完成。GitHub API 已确认固定 tag/commit 和源码文件公开可读，进一步审查需插件中心处理，见 [MARKETPLACE.md](MARKETPLACE.md)。
 
 **尚未验证**：完整退出再启动 PI、真实付费聊天/工具续轮、国际版真实账号流程。不要将离线测试或目录查询等同于真实对话成功。详细记录见 [AUDIT.md](AUDIT.md)。
 
